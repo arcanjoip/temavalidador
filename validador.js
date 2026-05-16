@@ -10,12 +10,13 @@
     const dominioAtual = window.location.hostname;
 
     if (dominiosAutorizados.includes(dominioAtual)) {
-        // 2. CSS VITAL DO TEMA
-        // Se autorizado, injeta o CSS que faz o tema funcionar.
-        // Remova o CSS do XML original e cole aqui.
-        const estiloEspecial = document.createElement('style');
-        estiloEspecial.innerHTML = `
-
+    // SE O DOMÍNIO FOR AUTORIZADO:
+    // Esta é a linha mágica que você precisa adicionar para mostrar o site!
+    document.body.style.display = 'block'; 
+} else {
+    // SE NÃO FOR AUTORIZADO:
+    document.body.innerHTML = "<h1>Licença Inválida!</h1>";
+}
     /* --- MASTER CSS AZUL --- */
     :root { 
         --bg-black: #000000; 
